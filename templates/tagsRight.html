@@ -1,0 +1,10 @@
+<div class="rightSide tags col-xs-3 col-sm-3 col-md-3">
+    <h1> {{ tags.text }} </h1>
+
+    {% for tag in tags.tags %}
+    <div class="inTags">
+        <a href=""> {{ tag}} </a>
+    </div>
+    {% endfor %}
+
+</div>

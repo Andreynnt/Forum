@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block cssfile %}
+     <link href="/static/css/login.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+      <div class="row">
+
+        <div class ="start col-xs-12 col-sm-12 col-md-12">
+           <h1> Log in </h1>
+        </div>
+        <div class="q  col-sm-8 col-md-8">
+              <div class="error">
+                <h3> oops, smth wrong! </h3>
+              </div>
+              <h2>Login</h2>
+              <div class="form-group">
+                   <textarea class="form-control" rows="1" id="comment"></textarea>
+              </div> 
+              <h2>Password</h2>
+              <div class="form-group">
+                   <textarea class="form-control" rows="1" id="comment"></textarea>
+              </div> 
+        </div>
+
+       {% include 'tagsRight.html' %}
+
+        <div class="q qAnswer col-sm-8 col-md-8">
+          <form class="loginButtom">      
+            <button type="button" class="btn btn-success">Log in!</button>
+          </form>
+          <div class="reg">
+            <a href="register.html">Create new account</a>
+          </div>
+        </div>
+
+
+        <div class="q qAnswer col-sm-8 col-md-8">
+        </div>
+
+       {% include 'bestMembers.html' %}
+
+  </div>
+
+{% endblock %}

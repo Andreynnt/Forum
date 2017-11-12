@@ -1,0 +1,10 @@
+<div class="rightSide tags col-xs-3 col-sm-3 col-md-3">
+    <h1> {{ members.text }} </h1>
+
+    {% for man in members.people %}
+    <div class="inTags">
+        <a href=""> {{ man }} </a>
+    </div>
+    {% endfor %}
+
+</div>

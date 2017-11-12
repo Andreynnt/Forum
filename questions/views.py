@@ -4,12 +4,41 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-from django.views.generic import TemplateView
 
-from django.http import HttpResponse
+from faker import lorem
+from random import shuffle
 
 
-class AboutView(TemplateView):
-    template_name = "index.html"
+ctx = dict()
+members = dict({
+    'text': 'Best members!',
+    'people': ['First man', 'Second one', 'Last one']
+})
+ctx['members'] = members
 
-# Create your views here.
+
+tags = dict({
+    'text': 'Popular tags',
+    'tags': ['python', 'park', 'django']
+})
+ctx['tags'] = tags
+
+
+def index(request):
+    qlist = list()
+    tags = lorem.words(5)
+    for i in range(1, 5):
+        shuffle(tags)
+        qlist.append({
+            'idx': i,
+            'title': ' '.join(lorem.words(3)),
+            'text': lorem.sentence(3),
+            'tags': tags[0:3],
+        })
+    ctx['questions'] = qlist
+    print(ctx['members'])
+    return render(request, 'index.html', ctx)
+
+
+def login(request):
+    return render(request, 'login.html', ctx)

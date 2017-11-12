@@ -1,0 +1,35 @@
+<div class="q  col-sm-8 col-md-8">
+<div class="oneQuestion">
+    <div class = "qAvatar">
+        <img src="/static/img/negr.jpg">
+    </div>
+    <div class = "qQuestion">
+        <div class="">
+            <h2> {{ question.title }}</h2>
+        </div>
+        <div class="">
+            <h3> {{ question.text }}</h3>
+        </div>
+    </div>
+    <div class="empty">
+    </div>
+    <div class = "qForm">
+        <form class="likeForm">
+            <button type="button" class="btn btn-success">Like</button>
+            <button type="button" class="btn btn-danger">Dislike</button>
+            <input type="number" name="cm" autofocus></p>
+        </form>
+    </div>
+    <div class="answers">
+        <a href="html/question/"> Answers (3)</a>
+    </div>
+    <div class="downTags">
+        <div class="qTags">
+            Tags:
+            {% for tag in question.tags %}
+                <a href="#"> {{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
