@@ -19,7 +19,11 @@ from django.contrib import admin
 from questions import views
 
 urlpatterns = [
+    url(r'^question/?', views.oneQuestion),
+    url(r'^ask/?', views.ask),
     url(r'^login/?', views.login),
+    url(r'^register/?', views.register),
+    url(r'^settings/?', views.settings),
     url(r'^', views.index),
     url(r'^admin/', admin.site.urls)
 ]

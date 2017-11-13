@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block cssfile %}
+    <link href="/static/css/question.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+
+        <div class ="start col-xs-12 col-sm-12 col-md-12"></div>
+
+        {% include 'question.html' %}
+
+        {% include 'tagsRight.html' %}
+
+        <div class ="start col-xs-12 col-sm-12 col-md-12">
+            <h1> Answers </h1>
+        </div>
+
+        {% for answer in answers %}
+            {% include 'answer.html' %}
+            {% if answer.idx == 2 %}
+                {% include 'bestMembers.html' %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="newAnswer col-xs-12 col-sm-12 col-md-12">
+            <div class = "qQuestion">
+              <div class="form-group">
+                <label for="comment">Your answer:</label>
+                 <textarea class="form-control" rows="10" id="comment"></textarea>
+              </div>
+            </div>
+        </div>
+
+          <form class="answerButton">
+            <button type="button" class="btn btn-success">Answer</button>
+          </form>
+    </div>
+{% endblock %}

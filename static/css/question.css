@@ -274,3 +274,8 @@ body {
 .footer > a {
   color: white;
 }
+
+.likelabel {
+  background-color: yellow;
+  width: 1.3rem;
+}

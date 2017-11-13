@@ -17,11 +17,13 @@
         <form class="likeForm">
             <button type="button" class="btn btn-success">Like</button>
             <button type="button" class="btn btn-danger">Dislike</button>
-            <input type="number" name="cm" autofocus></p>
+            <div style="float:right; width: 1.8rem; margin-right: 1.8rem; margin-top: 0.3rem; height: 2rem; text-align: center; border: 2px solid limegreen; border-radius: 5px; ">
+                {{ question.likes }}
+            </div>
         </form>
     </div>
     <div class="answers">
-        <a href="html/question/"> Answers (3)</a>
+        <a href="question.html"> Answers (3)</a>
     </div>
     <div class="downTags">
         <div class="qTags">

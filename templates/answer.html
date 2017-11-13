@@ -1,0 +1,29 @@
+        <div class="q qAnswer col-sm-8 col-md-8">
+            <div class = "qAvatar">
+              <img src="/static/img/negr.jpg">
+            </div>
+            <div class = "qQuestion">
+                <div class="">
+                  <h2> {{ answer.title }}</h2>
+                </div>
+                <div class="answer">
+                  <h3> {{ answer.text }} </h3>
+                </div>
+            </div>
+            <div class = "qForm">
+              <form class="likeForm">
+                <button type="button" class="btn btn-success">Like</button>
+                <button type="button" class="btn btn-danger">Dislike</button>
+                <div style="float:right; width: 1.8rem; margin-right: 1.8rem; margin-top: 0.3rem; height: 2rem; text-align: center; border: 2px solid limegreen; border-radius: 5px; ">
+                {{ answer.likes }}
+            </div>
+              </form>
+            </div>
+            <div class="answers">
+              <div class="form-check">
+                <label class="form-check-label">
+                 <input class="form-check-input" type="checkbox" value=""> Correct!
+               </label>
+               </div>
+            </div>
+        </div>

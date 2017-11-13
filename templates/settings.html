@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block cssfile %}
+    <link href="/static/css/settings.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+
+        <div class ="start col-xs-12 col-sm-12 col-md-12">
+           <h1> Register </h1>
+        </div>
+
+        <div class="q  col-sm-8 col-md-8">
+              <div class="error">
+                <h3> oops, smth wrong! </h3>
+              </div>
+              <h2>Login</h2>
+              <div class="form-group">
+                   <textarea class="form-control" rows="1" id="comment"></textarea>
+              </div>
+              <h2>Email</h2>
+              <div class="form-group">
+                   <textarea class="form-control" rows="1" id="comment"></textarea>
+              </div>
+        </div>
+
+        {% include 'tagsRight.html' %}
+
+        <div class="q qAnswer col-sm-8 col-md-8">
+              <h2>NickName</h2>
+              <div class="form-group">
+                   <textarea class="form-control" rows="1" id="comment"></textarea>
+              </div>
+        </div>
+
+        <div class="rightSide tags col-xs-3 col-sm-3 col-md-3">
+        </div>
+
+        <div class="q qAnswer col-sm-8 col-md-8">
+             <h2>Upload avatar</h2>
+             <div class="nudes">
+                <img src="/static/img/avatar.jpg">
+             </div>
+           <form class = "sendNudes" method="post" enctype="multipart/form-data">
+              <div>
+                <input type="file" id="file" name="file" multiple>
+              </div>
+          </form>
+          <form class="answerButton">
+            <button type="button" class="btn btn-success">Save</button>
+          </form>
+        </div>
+
+        {% include 'bestMembers.html' %}
+    </div>
+{% endblock %}
