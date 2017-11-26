@@ -1,0 +1,19 @@
+<div class="inPages">
+    <nav aria-label="">
+        <ul class="pagination">
+
+             {% if pages.has_previous %}
+                    <li class="page-item"><a class="page-link" href="{% url 'page_page' pages.previous_page_number %}">←</a></li>
+             {% endif %}
+
+             {% for page in pages.paginator.page_range %}
+                    <li class="page-item"><a class="page-link" href="{% url 'page_page' page %}">{{ page }}</a></li>
+             {% endfor %}
+
+             {% if pages.has_next %}
+                 <li class="page-item"><a class="page-link" href="{% url 'page_page' pages.next_page_number %}">→</a></li>
+             {% endif %}
+
+        </ul>
+    </nav>
+</div>
